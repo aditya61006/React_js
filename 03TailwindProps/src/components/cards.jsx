@@ -13,7 +13,7 @@ function card({username = "Unknown" ,age= '-1'}){
       </p>
     </blockquote>
     <figcaption class="font-medium">
-      <div class="text-sky-500 dark:text-sky-400">
+      <div class="text-sky-500  dark:text-sky-400">
         {username}
       </div>
       <div class="text-slate-700 dark:text-slate-500">
