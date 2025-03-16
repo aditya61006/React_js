@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import './App.css'
 function App() {
-  const [size, setsize] = useState(50)
+  const [size, setsize] = useState(20)
   const [number, setnumber] = useState(false)
   const [charAllowed, setcharAllowed] = useState(false)
   const [passoword, setpassword] = useState("")
@@ -15,7 +15,7 @@ function App() {
     if (charAllowed) str += "`~!@#$%^&*()_+=-':;,.?/|"
 
     for (let i = 1; i <= size; i++) {
-
+         
       let char = Math.floor(Math.random() * str.length + 1)
       pass += str.charAt(char)
 
