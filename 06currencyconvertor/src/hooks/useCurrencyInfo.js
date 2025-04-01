@@ -4,11 +4,9 @@ import "tailwindcss"
 function useCurrencyInfo(currency){
     const [data, setData] =  useState({})
     useEffect(()=> {
-        let res = fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`).then((response)=>{
-            response.json()
-        }).then((response)=>{
-            setData(response[currency])      
-        })
+       fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`)
+       .then((res)=>  res.json()       )
+        .then((res)=> setData(res[currency])  )
         
     },[currency])
     console.log(data);
